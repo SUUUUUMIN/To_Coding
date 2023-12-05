@@ -1,2 +1,12 @@
-# baekjoon
-This is a auto push repository for Baekjoon Online Judge created with [BaekjoonHub](https://github.com/BaekjoonHub/BaekjoonHub).
+# 📃코딩 연습장
+
+### 프로그래머스
+#### 🔵lv0
+
+| 문제번호 | 링크 |
+| ----- | ----- |
+|120808. 분수의 덧셈|[↗️](프로그래머스/unrated/120583. 중복된 숫자 개수)|
+
+### 🟡백준
+
+
