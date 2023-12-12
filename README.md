@@ -1,5 +1,5 @@
 # 
-# 🧑🏻‍💻 Solved Problems
+# 🐱 코딩연습장
 
 ## 📚 백준
 ### 🚀 Bronze
