@@ -1,33 +1,14 @@
-H,M=input().split()
-C=input()
-H=int(H)
-M=int(M)
-C=int(C)
-plus=0
-if C < 60:
-  new_M=M+C
-  if new_M >= 60:
-    new_M=new_M%60
-    plus=1
-  if plus==1:
-    new_H=H+1
-  else:
-    new_H=H
-elif C > 60:
-  new_M=M+C%60
-  new_H=H+C//60
-  if new_M >= 60:
-    new_M=new_M%60
-    plus=1
-  if plus==1:
-    new_H=new_H+1
-  else:
-    new_H=new_H
-else:
-  new_M=M
-  new_H=H+1
+#입력받기
+H,M=map(int,input().split())
+C=int(input())
 
-if new_H>=24:
-  new_H=new_H-24
+#M+C
+M=M+C
+if M//60>0:  #60분 이상일 때
+  H=H+(M//60)
+  M=M%60
 
-print(new_H,new_M)
+if H>=24:    #자정에 시간이 바뀔 때
+  H=H-24
+
+print(H,M)
