@@ -1,19 +1,18 @@
 def solution(N, stages):
     answer = []
+    cnt=[]
     fail={}
-    #도전자 수
-    people=len(stages)
-    
-    #실패율
     for i in range(1,N+1):
-        if people!=0:
-            cnt=stages.count(i)
-            fail[i]=cnt/people
-            people-=cnt
+        if i in stages:
+            cnt.append(stages.count(i))
         else:
-            fail[i]=0
-
+            cnt.append(0)
+    people=len(stages)
+    for i in range(N):
+        fail[i+1]=cnt[i]/people
+        people-=cnt[i]
+    
     answer=list(fail.items())
-    answer=sorted(answer,key=lambda x: (-x[1],x[0]))
-    res=[answer[i][0] for i in range(len(answer))]
-    return res
+    sorted(answer,key=lambda x : (x[1],-x[0]))
+    
+    return answer
