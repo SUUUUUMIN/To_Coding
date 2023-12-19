@@ -1,19 +1,19 @@
-two_d = [list(map(int, input())) for _ in range(2)]
-sum1=0 
-sum2=0 
-sum3=0
+#2588
+#
+#입력받기
+a=list(map(int,input()))
+b=list(map(int,input()))
 
-for j in range(2):
-      two_d[j][0]=two_d[j][0]*100
-      two_d[j][1]=two_d[j][1]*10
+#자릿수조절
+a[0]=a[0]*100
+a[1]=a[1]*10
 
+#곱셈
+fir=sec=thr=0
 for i in range(3):
-  sum1+=two_d[0][i]*two_d[1][2]
-  sum2+=two_d[0][i]*two_d[1][1]
-  sum3+=two_d[0][i]*two_d[1][0]
+  fir+=a[i]*b[0]
+  sec+=a[i]*b[1]
+  thr+=a[i]*b[2]
 
-res=sum1+sum2+sum3
-print(sum1)
-print(sum2//10)
-print(sum3//100)
-print(res)
+#출력
+print(f'{thr}\n{sec}\n{fir}\n{thr+sec*10+fir*100}')
