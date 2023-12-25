@@ -4,7 +4,7 @@ n = int(input())
 board = {}
 
 for _ in range(n):
-    team = input().rstrip()
+    team = input().strip()
     nowS = 1
     scores = []
 
