@@ -1,5 +1,5 @@
 from itertools import permutations
 n=int(input())
-
-for p in permutations([i+1 for i in range(n)]):
+nlist=[i+1 for i in range(n)]
+for p in permutations(nlist):
   print(*p)
