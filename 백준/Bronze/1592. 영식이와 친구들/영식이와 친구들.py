@@ -1,22 +1,18 @@
-#1592
-from collections import deque
 N,M,L=map(int,input().split())
-chair=deque([i for i in range(1,N+1)])
 cnt=[0 for _ in range(N)]
-time=-1
+cnt[0]=1
+time=0
+idx=0
 
 while True:
-  if max(cnt)==M:
+  if cnt[idx]==M:
+    print(time)
     break
-  else:
-    c=chair[0]
-    cnt[c-1]+=1
-    seat=cnt[c-1]
+  if cnt[idx]%2==0:  #짝수
+    idx=abs((idx-L)%N)
+    cnt[idx]+=1
     time+=1
-
-    if seat%2==0:
-      chair.rotate(-(L))
-    else:
-      chair.rotate((L))
-
-print(time)
+  else:
+    idx=(idx+L)%N
+    cnt[idx]+=1
+    time+=1
