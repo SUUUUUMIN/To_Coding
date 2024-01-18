@@ -6,7 +6,6 @@ while True:
     if mul%num==0:
       cnt+=1
   if cnt>=3:
+    print(mul)
     break
   mul+=1
-
-print(mul)
