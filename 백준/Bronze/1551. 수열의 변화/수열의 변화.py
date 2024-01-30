@@ -1,9 +1,7 @@
 N,K=map(int,input().split())
 num=list(map(int,input().split(',')))
 
-while True:
-  if K==0:
-    break
+while K>0:
   temp=[]
   for i in range(N-1):
     temp.append(num[i+1]-num[i])
