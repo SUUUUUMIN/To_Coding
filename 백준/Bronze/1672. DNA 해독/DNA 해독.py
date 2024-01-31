@@ -10,6 +10,6 @@ dna=list(input())
 for i in range(n-2,-1,-1):
   s=''.join(sorted(dna[-2:]))
   dna[i]=dic[s]
-  dna.pop(i+1)
+  dna.pop()
 
 print(*dna)
