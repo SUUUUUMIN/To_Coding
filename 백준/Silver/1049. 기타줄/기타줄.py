@@ -10,11 +10,8 @@ for _ in range(m):
     solo=s
 
 money=[]
-  #낱개
-money.append(solo*n)
-  #패키지+낱개
-money.append(package*(n//6)+solo*(n%6))
-  #패키지
-money.append(package*(n//6 if n%6==0 else n//6+1))
+money.append(solo*n)  #낱개
+money.append(package*(n//6)+solo*(n%6))  #패키지+낱개
+money.append(package*(n//6 if n%6==0 else n//6+1))  #패키지
 
 print(min(money))
