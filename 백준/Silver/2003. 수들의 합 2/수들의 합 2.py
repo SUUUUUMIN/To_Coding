@@ -7,8 +7,6 @@ while r<n:
   if sum(temp)==m:
     cnt+=1
     r+=1
-  elif sum(temp)<m:
-    r+=1
-  else:
-    l+=1
+  elif sum(temp)<m: r+=1
+  else: l+=1
 print(cnt)
