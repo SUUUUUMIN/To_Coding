@@ -1,16 +1,6 @@
 # 
 ## 🐱 코딩연습장
-<div align="center">
-  
-[![Solved.ac 프로필](http://mazassumnida.wtf/api/v2/generate_badge?boj=wejkjj4)](https://solved.ac/newjaam)
 
-![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=wejkjj4&show_icons=true&theme=shadow_blue)
-
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=wejkjj4&layout=compact&theme=shadow_blue)
-
-
-
-</div>
 ### 📚 백준
 #### 🚀 Bronze
 | 문제번호 | 링크 |
