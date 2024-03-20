@@ -1,4 +1,10 @@
 # 
+<div align="center">
+  
+[![Solved.ac 프로필](http://mazassumnida.wtf/api/v2/generate_badge?boj=wejkjj4)](https://solved.ac/wejkjj4)
+
+</div>
+
 ## 🐱 코딩연습장
 
 ### 📚 백준
