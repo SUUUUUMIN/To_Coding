@@ -3,9 +3,8 @@ import sys
 input=sys.stdin.readline
 #입력
 N=int(input())
-li=[]
-for _ in range(N):
-  li.append(int(input()))
+li=[int(input()) for _ in range(N)]
+
 #내림차순 정렬
 li.sort(reverse=True)
 #큰 3개 비교
