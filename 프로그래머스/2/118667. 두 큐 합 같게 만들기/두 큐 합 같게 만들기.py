@@ -14,8 +14,7 @@ def solution(queue1, queue2):
     while queue1 and queue2:
         if total/2 == first:
             return cnt
-#first와 second를 비교했더니 시간초과를 만났다
-#하나의 큐만 집중해보는거..
+
         elif first > total/2:
             temp=queue1.popleft()
             #queue2.append(temp)
