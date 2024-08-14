@@ -2,12 +2,16 @@ import sys
 sys.setrecursionlimit(10**6)
 input=sys.stdin.readline
 
-def dfs(val):
-  visited[val]=True
-  for i in graph[val]:
-    if visited[i]==False:
-      dfs(i)
-  return 1
+from collections import deque
+def bfs(val):
+    queue = deque([val])
+    while queue:
+        v = queue.popleft()
+        for w in graph[v]:
+            if visited[w]==False:
+                visited[w]=True
+                queue.append(w)
+    return 1
 
 n,m=map(int, input().split())
 graph=[[] for _ in range(n+1)]
@@ -20,5 +24,5 @@ for _ in range(m):
 cnt = 0
 for i in range(1, n + 1):
     if visited[i]==False:
-        cnt += dfs(i)
+        cnt += bfs(i)
 print(cnt)
