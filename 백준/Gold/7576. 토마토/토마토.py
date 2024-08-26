@@ -23,9 +23,6 @@ def bfs():
         queue.append([nx,ny])
 
 bfs()
-
-
-bfs()
 for i in ground:
     for j in i:
         if j == 0:
