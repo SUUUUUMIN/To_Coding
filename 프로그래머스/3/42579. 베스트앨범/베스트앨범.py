@@ -4,15 +4,15 @@ def solution(genres, plays):
     for i in range(len(genres)):
         genre, play = genres[i], plays[i]
         
-        if genre not in songs:
+        if genre in songs:
+            songs[genre]['total'] += play
+            songs[genre]['info'].append([i, play])
+        
+        else:
             songs[genre] = {
                 'total' : play,
                 'info' : [[i, play]]
             }
-        else:
-            songs[genre]['total'] += play
-            songs[genre]['info'].append([i, play])
-    
     songs = sorted(songs.items(), key=lambda item: item[1]['total'], reverse=True)
     
     for gen, song in songs:
