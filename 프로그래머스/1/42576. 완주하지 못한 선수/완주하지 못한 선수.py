@@ -1,14 +1,14 @@
 def solution(participant, completion):
-    answer={}
+    temp = {}
     for p in participant:
-        if p in answer:
-            answer[p]+=1
+        if p in temp:
+            temp[p]+=1
         else:
-            answer[p]=1
+            temp[p]=1
+    
     for c in completion:
-        if c in answer.keys():
-            if answer[c]==1:
-                del answer[c]
-            else:
-                answer[c]-=1
-    return list(answer.keys())[0]
+        temp[c]-=1
+    
+    for name, val in temp.items():
+        if val == 1:
+            return name
