@@ -1,15 +1,15 @@
 import sys
-input=sys.stdin.readline
+input = sys.stdin.readline
 
-n,t=map(int,input().split())
-li=list(map(int,input().split()))
+N, Q = map(int, input().split(" "))
+a = list(map(int, input().split(" ")))
+s = [0]
+temp = 0
 
-acc=0
-acc_li=[0]
-for i in li:
-  acc+=i
-  acc_li.append(acc)
+for i in range(N):
+    temp += a[i]
+    s.append(temp)
 
-for _ in range(t):
-  a,b=map(int,input().split())
-  print(acc_li[b]-acc_li[a-1])
+for _ in range(Q):
+    i, j = map(int, input().split(" "))
+    print(s[j]-s[i-1])
