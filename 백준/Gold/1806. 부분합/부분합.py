@@ -6,14 +6,14 @@ for num in A:
     tot += num
     C.append(tot)
 
-start, end, temp, m = 1, 1, 0, N+1
+start, end, temp, m = 0, 1, 0, N+1
 
 while end <= N:
-    temp = C[end]-C[start-1]
+    temp = C[end]-C[start]
     if temp < S:
         end+=1
     else:
-        m = min(m, end-start+1)
+        m = min(m, end-start)
         start+=1
 
 if m==N+1:
